@@ -8,14 +8,11 @@ const tutorials = [
   "Immutable State and Pure Functions",
   "what is the difference between == and ===?",
   "what is the difference between event capturing and bubbling?",
-  "what is JSONP?",
+  "what is Jsnop?",
 ];
 
 function titleCased() {
   return tutorials.map(tutorial => {
-    if (typeof tutorial !== "string") {
-      return tutorial; // Skip non-string values
-    }
     return tutorial
       .split(" ")
       .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
@@ -23,4 +20,5 @@ function titleCased() {
   });
 }
 
+// Optional: Log the result to verify
 console.log(titleCased());
