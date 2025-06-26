@@ -13,6 +13,9 @@ const tutorials = [
 
 function titleCased() {
   return tutorials.map(tutorial => {
+    if (typeof tutorial !== "string") {
+      return tutorial; // Skip non-string values
+    }
     return tutorial
       .split(" ")
       .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
